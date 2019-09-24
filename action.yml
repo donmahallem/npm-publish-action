@@ -1,0 +1,17 @@
+name: 'Npm Publish Action'
+description: "Publish action to npm or github package registry"
+inputs:
+  target:  # id of input
+    description: 'Either npm or github are allowed'
+    required: false
+    default: 'npm'
+  github_secret:  # id of input
+    description: 'The github token secret'
+    required: true
+    default: ''
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+branding:
+  icon: 'bookmark'
+  color: 'orange'
