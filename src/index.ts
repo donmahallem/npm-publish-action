@@ -3,7 +3,7 @@ import * as actionscore from '@actions/core';
 import { Config } from './config';
 
 const config: Config = {
-    FILTER: actionscore.getInput("filter", {
+    TARGET: actionscore.getInput("target", {
         required: false
     }),
     GITHUB_SECRET: actionscore.getInput("github_secret", {
