@@ -7,8 +7,12 @@ inputs:
     default: 'npm'
   github_secret:  # id of input
     description: 'The github token secret'
-    required: true
-    default: ''
+    required: false
+    default: false
+  npm_secret:  # id of input
+    description: 'The github token secret'
+    required: false
+    default: false
 runs:
   using: 'node12'
   main: 'dist/index.js'

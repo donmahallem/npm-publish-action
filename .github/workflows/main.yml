@@ -1,9 +1,5 @@
 name: Check for required label
-on:
-  pull_request:
-    types: [opened, labeled, unlabeled, synchronize]
-  label:
-    types: ['*']
+on: [push]
 
 jobs:
   hello_world_job:
