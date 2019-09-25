@@ -1,5 +1,6 @@
 #!/bin/sh
 set -e
+echo "NPM Publish Action ($INPUT_PUBLISH_ARGS)"
 if [ -z "$INPUT_TARGET" ]; then
   echo "Target needs to be defined."
   exit 1

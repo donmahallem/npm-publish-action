@@ -22,7 +22,3 @@ inputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.source }}
-    - ${{ inputs.target }}
-    - ${{ inputs.force-push }}

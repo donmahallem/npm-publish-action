@@ -5,8 +5,8 @@ LABEL version="$VERSION" \
   repository="https://github.com/donmahallem/npm-publish-action" \
   homepage="https://donmahallem.github.io/npm-publish-action" \
   maintainer="DonMahallem" \
-  "com.github.actions.name"="GitHub Pages Helper" \
-  "com.github.actions.description"="Github Action for releasing to github pages" \
+  "com.github.actions.name"="GitHub NPM Publish Action" \
+  "com.github.actions.description"="Github Action for publishing actions to github or npm" \
   "com.github.actions.color"="purple" \
   "com.github.actions.icon"="upload-cloud"
 
