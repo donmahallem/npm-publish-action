@@ -1,0 +1,28 @@
+name: Common Test
+on: [push]
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: A job to say 
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '12.x'
+      - name: No Filter
+        id: check1
+        uses: ./
+        with:
+          github_secret: ${{ secrets.github_token }}
+          target: npm
+          publish_args: '--dry-run'
+      - name: No Filter
+        id: check2
+        uses: ./
+        with:
+          npm_secret: ${{ secrets.npm_token }}
+          target: github
+          publish_args: '--dry-run'
