@@ -1,1 +1,1 @@
-# npm-publish-action
+# github-pages

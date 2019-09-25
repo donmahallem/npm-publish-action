@@ -13,9 +13,12 @@ jobs:
         uses: ./
         with:
           github_secret: ${{ secrets.github_token }}
+          target: npm
+          publish_args: '--dry-run'
       - name: No Filter
         id: check2
         uses: ./
         with:
-          github_secret: ${{ secrets.github_token }}
-          filter: testlabel,bug,enhancement
+          npm_secret: ${{ secrets.npm_token }}
+          target: github
+          publish_args: '--dry-run'

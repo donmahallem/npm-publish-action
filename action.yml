@@ -1,21 +1,28 @@
-name: 'Npm Publish Action'
-description: "Publish action to npm or github package registry"
+# action.yml
+name: 'Github Pages Release Action'
+description: 'Helper to generate Github Pages '
+author: DonMahallem
 inputs:
   target:  # id of input
-    description: 'Either npm or github are allowed'
-    required: false
+    description: 'Either github or npm'
+    required: true
     default: 'npm'
   github_secret:  # id of input
-    description: 'The github token secret'
+    description: 'The Github Token'
     required: false
     default: false
-  npm_secret:  # id of input
-    description: 'The github token secret'
+  npm_secret:
+    description: 'Repositories Deploy Key to be used'
     required: false
     default: false
+  publish_args:
+    description: 'Additional publish args'
+    required: false
+    default: ''
 runs:
-  using: 'node12'
-  main: 'dist/index.js'
-branding:
-  icon: 'bookmark'
-  color: 'orange'
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.source }}
+    - ${{ inputs.target }}
+    - ${{ inputs.force-push }}
