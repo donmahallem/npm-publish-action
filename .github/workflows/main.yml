@@ -1,4 +1,4 @@
-name: Check for required label
+name: Common Test
 on: [push]
 
 jobs:
