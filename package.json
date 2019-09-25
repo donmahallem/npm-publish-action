@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/donmahallem/npm-publish-action/issues"
   },
-  "homepage": "https://github.com/donmahallem/npm-publish-action#readme"
+  "homepage": "https://github.com/donmahallem/npm-publish-action#readme",
+  "files": [
+    "package.json"
+  ]
 }
